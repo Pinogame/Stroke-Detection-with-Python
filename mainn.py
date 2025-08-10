@@ -194,9 +194,6 @@ if submit:
             label = "Positive (High Risk)" if pred else "Negative (Low Risk)"
             chip  = "bad" if pred else "ok"
 
-            st.markdown('<div class="card">', unsafe_allow_html=True)
-            st.markdown('<div class="section"><span style="color:#22D3EE;font-size:1.2rem;">📊</span><div class="title">Prediction</div></div>', unsafe_allow_html=True)
-
             gval = max(0.0, min(1.0, proba))
             st.markdown(
                 f"""
@@ -222,3 +219,4 @@ if submit:
             st.error(f"Prediction failed: {e}")
 
 st.markdown("</div>", unsafe_allow_html=True)  # end container
+
